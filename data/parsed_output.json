@@ -1,0 +1,97 @@
+{
+  "vnindex": {
+    "index_code": "vnindex",
+    "total_sections": 5,
+    "sections": [
+      {
+        "icon": "📈",
+        "title": "XU HƯỚNG GIÁ",
+        "content": "Ngắn hạn: VNINDEX đang trong xu hướng tăng mạnh\n- Giá hiện tại: 1,250 điểm\n- MA5: 1,240 điểm\n- MA10: 1,230 điểm\n\nTrung hạn: Xu hướng tăng được duy trì\n- MA20: 1,200 điểm\n- Momentum tích cực",
+        "is_alert": false
+      },
+      {
+        "icon": "📊",
+        "title": "XU HƯỚNG KHỐI LƯỢNG",
+        "content": "Khối lượng giao dịch tăng đột biến:\n- Khối lượng trung bình: 850 triệu CP/phiên\n- Tăng 25% so với tuần trước",
+        "is_alert": false
+      },
+      {
+        "icon": "⚖️",
+        "title": "CUNG-CẦU",
+        "content": "Cung: Áp lực bán yếu tại vùng 1,260\nCầu: Mua mạnh tại vùng 1,240",
+        "is_alert": false
+      },
+      {
+        "icon": "⚠️",
+        "title": "RỦI RO",
+        "content": "Ngắn hạn: Rủi ro THẤP\n- RSI chưa quá mua\n- Hỗ trợ mạnh tại 1,240\n\nTrung hạn: Rủi ro TRUNG BÌNH",
+        "is_alert": false
+      },
+      {
+        "icon": "🎯",
+        "title": "KHUYẾN NGHỊ VỊ THẾ",
+        "content": "- Nhà đầu tư ngắn hạn: MUA tích lũy tại vùng 1,240-1,245\n- Nhà đầu tư dài hạn: GIỮ VỊ THẾ",
+        "is_alert": true
+      }
+    ]
+  },
+  "vn30": {
+    "index_code": "vn30",
+    "total_sections": 3,
+    "sections": [
+      {
+        "icon": "📈",
+        "title": "XU HƯỚNG GIÁ",
+        "content": "VN30 đang outperform VNINDEX:\n- Giá hiện tại: 1,450 điểm\n- Tăng 3.2% trong tuần",
+        "is_alert": false
+      },
+      {
+        "icon": "⚖️",
+        "title": "CUNG-CẦU",
+        "content": "Cầu mạnh từ các cổ phiếu banking và bất động sản",
+        "is_alert": false
+      },
+      {
+        "icon": "⚠️",
+        "title": "RỦI RO",
+        "content": "Rủi ro thấp trong ngắn hạn",
+        "is_alert": false
+      }
+    ]
+  },
+  "vnreal": {
+    "index_code": "vnreal",
+    "total_sections": 3,
+    "sections": [
+      {
+        "icon": "📈",
+        "title": "XU HƯỚNG GIÁ",
+        "content": "Ngành bất động sản phục hồi tích cực:\n- VNREAL tăng 4.5% trong tuần\n- Dẫn dắt thị trường",
+        "is_alert": false
+      },
+      {
+        "icon": "📉",
+        "title": "BIẾN ĐỘNG GIÁ",
+        "content": "Biến động tăng nhẹ do tin tốt từ chính sách",
+        "is_alert": false
+      },
+      {
+        "icon": "⚠️",
+        "title": "RỦI RO",
+        "content": "Rủi ro vẫn còn cao do yếu tố vĩ mô",
+        "is_alert": false
+      }
+    ]
+  },
+  "_metadata": {
+    "parse_time_seconds": 0.0003,
+    "total_indices_found": 3,
+    "indices": [
+      "vnindex",
+      "vn30",
+      "vnreal"
+    ],
+    "file_path": "/home/user/Market-Overview/data/sample_report.txt",
+    "file_size_bytes": 1331
+  }
+}
