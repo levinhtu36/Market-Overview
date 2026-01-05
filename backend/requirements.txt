@@ -1,0 +1,33 @@
+# ============================================================================
+# DNSE Lightspeed API Integration - Python Dependencies
+# ============================================================================
+# Install with: pip install -r requirements.txt
+# Or for development: pip install -r requirements.txt --upgrade
+# ============================================================================
+
+# Core dependencies
+requests>=2.31.0          # HTTP library for REST API calls
+python-dotenv>=1.0.0      # Environment variable management
+websockets>=12.0          # WebSocket support for real-time data
+
+# Web framework (for API server)
+Flask>=3.0.0             # Web framework for REST API
+Flask-CORS>=4.0.0        # CORS support for Flask
+
+# Optional but recommended
+aiohttp>=3.9.0           # Async HTTP client (for async operations)
+asyncio>=3.4.3           # Async I/O support
+
+# Data processing (optional, but useful for market data)
+pandas>=2.0.0            # Data manipulation and analysis
+numpy>=1.24.0            # Numerical computing
+
+# Development dependencies (optional)
+pytest>=7.4.0            # Testing framework
+pytest-asyncio>=0.21.0   # Async testing support
+black>=23.0.0            # Code formatter
+flake8>=6.0.0            # Linting
+mypy>=1.5.0              # Type checking
+
+# Logging and monitoring (optional)
+coloredlogs>=15.0        # Colored console logging
