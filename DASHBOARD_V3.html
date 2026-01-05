@@ -3586,9 +3586,23 @@
 	            height: 14px;
 	        }
 
-		        @media (max-width: 900px) {
-		            .keylevels-panel, .targetlevels-panel { max-width: 100%; }
-		            .keylevels-chart { height: 300px; }
+	        @media (max-width: 900px) {
+	            .keylevels-panel, .targetlevels-panel { max-width: 100%; }
+	            .keylevels-chart { height: 300px; }
+	        }
+
+		        .ip-disclaimer {
+		            margin-top: 8px;
+		            padding: 10px 12px;
+		            border-radius: 14px;
+		            border: 1px dashed var(--border-color);
+		            background: var(--bg-card);
+		            color: var(--text-secondary);
+		            font-size: 0.82rem;
+		            line-height: 1.45;
+		        }
+		        .ip-disclaimer strong {
+		            color: var(--text-primary);
 		        }
 
 		        /* ===== Maintenance mode (public V3) ===== */
@@ -3681,6 +3695,10 @@
 		                <h2>📊 Index</h2>
 		                <div class="date" id="reportDate">--/--/----</div>
 		                <div class="plan-note" id="planNote">Lite (Public): Tổng hợp + VNINDEX, VN30, VN100, VNMIDCAP.</div>
+		                <div class="ip-disclaimer" role="note" aria-label="Bản quyền và miễn trừ trách nhiệm">
+		                    <div><strong>© Bloger Chim Cut</strong> — Nội dung là tài sản trí tuệ.</div>
+		                    <div>Sản phẩm có AI hỗ trợ tạo; chỉ mang tính tham khảo, <strong>không phải</strong> lời khuyên/khuyến nghị đầu tư.</div>
+		                </div>
 		            </div>
 
             <div class="search-box">
