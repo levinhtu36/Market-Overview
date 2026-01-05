@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Dashboard...</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+        }
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+        .spinner {
+            border: 4px solid rgba(255,255,255,0.1);
+            border-top: 4px solid #4facfe;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+        }
+        p {
+            color: #94a3b8;
+            margin: 0;
+        }
+        a {
+            color: #4facfe;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 1px solid #4facfe;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        a:hover {
+            background: #4facfe;
+            color: #0f172a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spinner"></div>
+        <h1>🚀 Đang tải Dashboard...</h1>
+        <p>Sẽ tự động chuyển hướng trong giây lát</p>
+        <a href="DASHBOARD_V3.html?v=public_20260105a">Click vào đây nếu không tự động chuyển</a>
+    </div>
+    <script>
+        // Auto redirect after 1 second
+        setTimeout(function() {
+            window.location.href = 'DASHBOARD_V3.html?v=public_20260105a';
+        }, 1000);
+    </script>
+</body>
+</html>
