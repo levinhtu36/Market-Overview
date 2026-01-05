@@ -53,16 +53,6 @@
 				            --indigo: #6366f1;
 				            --warning-dark: #d97706;
 				            --warning-ink: #fbbf24;
-				            --donate-pink-1: #ffb6c1;
-				            --donate-pink-2: #ff91a4;
-				            --donate-pink-3: #ff8fab;
-				            --donate-pink-ink: #ff6987;
-				            --donate-gradient: linear-gradient(135deg, var(--donate-pink-1) 0%, var(--donate-pink-2) 50%, var(--donate-pink-3) 100%);
-				            --donate-shadow: 0 6px 20px color-mix(in srgb, var(--donate-pink-2) 35%, transparent),
-				                             0 0 20px color-mix(in srgb, var(--donate-pink-2) 25%, transparent);
-				            --donate-shadow-hover: 0 8px 25px color-mix(in srgb, var(--donate-pink-2) 45%, transparent),
-				                                   0 0 30px color-mix(in srgb, var(--donate-pink-2) 35%, transparent);
-				            --qr-surface: #ffffff;
 				            --shadow-modal: 0 20px 60px rgba(0, 0, 0, 0.45);
 				            --shadow-text: 0 1px 2px rgba(0, 0, 0, 0.45);
 				            --heatmap-surface: var(--lg-surface-semi);
@@ -149,16 +139,6 @@
 			            --indigo: #6366f1;
 			            --warning-dark: #d97706;
 			            --warning-ink: #92400e;
-			            --donate-pink-1: #ffb6c1;
-			            --donate-pink-2: #ff91a4;
-			            --donate-pink-3: #ff8fab;
-			            --donate-pink-ink: #ff6987;
-			            --donate-gradient: linear-gradient(135deg, var(--donate-pink-1) 0%, var(--donate-pink-2) 50%, var(--donate-pink-3) 100%);
-			            --donate-shadow: 0 6px 20px color-mix(in srgb, var(--donate-pink-2) 28%, transparent),
-			                             0 0 20px color-mix(in srgb, var(--donate-pink-2) 20%, transparent);
-			            --donate-shadow-hover: 0 8px 25px color-mix(in srgb, var(--donate-pink-2) 38%, transparent),
-			                                   0 0 30px color-mix(in srgb, var(--donate-pink-2) 28%, transparent);
-			            --qr-surface: #ffffff;
 			            --shadow-modal: 0 20px 60px rgba(2, 6, 23, 0.18);
 			            --shadow-text: 0 1px 2px rgba(2, 6, 23, 0.12);
 			            --heatmap-surface: var(--lg-surface-semi);
@@ -1025,65 +1005,6 @@
             animation: fadeInUp 0.6s ease 0.1s backwards;
         }
 
-        /* Donate Button - Cute & Friendly */
-	        .donate-btn {
-	            margin-top: 15px;
-	            padding: 12px 28px;
-	            background: var(--donate-gradient);
-	            color: var(--text-on-accent);
-	            border: none;
-	            border-radius: 50px;
-	            font-size: 1rem;
-	            font-weight: 600;
-	            cursor: pointer;
-	            box-shadow: var(--donate-shadow);
-	            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-	            animation: fadeInUp 0.6s ease 0.2s backwards, pulse-glow 2s ease-in-out infinite;
-	            position: relative;
-	            overflow: hidden;
-	        }
-
-	        .donate-btn::before {
-	            content: '';
-	            position: absolute;
-	            top: -50%;
-	            left: -50%;
-	            width: 200%;
-	            height: 200%;
-	            background: linear-gradient(45deg, transparent, color-mix(in srgb, var(--text-on-accent) 35%, transparent), transparent);
-	            transform: rotate(45deg);
-	            animation: shimmer 3s infinite;
-	        }
-
-	        .donate-btn:hover {
-	            transform: translateY(-3px) scale(1.05);
-	            box-shadow: var(--donate-shadow-hover);
-	        }
-
-        .donate-btn:active {
-            transform: translateY(-1px) scale(1.02);
-        }
-
-        .donate-footer {
-            display: none;
-            margin-top: 18px;
-            padding: 0 12px calc(28px + env(safe-area-inset-bottom, 0px));
-            justify-content: center;
-        }
-
-        .donate-footer .donate-btn {
-            width: min(520px, 100%);
-        }
-
-		        @keyframes pulse-glow {
-		            0%, 100% { box-shadow: var(--donate-shadow); }
-		            50% { box-shadow: var(--donate-shadow-hover); }
-		        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) rotate(45deg); }
-        }
 
         @keyframes fadeInUp {
             from {
@@ -1337,8 +1258,6 @@
 
 		            /* Mobile: reduce long-running animations */
 		            .section-item.conclusion-section .icon { animation: none; }
-		            .donate-btn { animation: none; }
-		            .donate-btn::before { animation: none; }
 
 		            .mobile-menu-fab {
 		                display: inline-flex;
@@ -1357,15 +1276,6 @@
 	            #emptyState {
 	                display: none !important;
 	                padding: 0 !important;
-	            }
-
-	            /* Mobile: keep donate CTA at the bottom, not in the header */
-	            .page-header .donate-btn {
-	                display: none;
-	            }
-
-	            .donate-footer {
-	                display: flex;
 	            }
 
 	            .sidebar,
@@ -2060,178 +1970,6 @@
 	            color: var(--warning);
 	        }
 
-        /* Donate Modal Styles - Cute & Friendly */
-	        .donate-modal {
-	            display: none;
-	            position: fixed;
-	            z-index: 10000;
-	            left: 0;
-	            top: 0;
-	            width: 100%;
-	            height: 100%;
-	            background-color: var(--overlay-scrim);
-	            backdrop-filter: blur(var(--lg-blur));
-	            animation: fadeIn 0.3s ease;
-	        }
-
-	        .donate-modal-content {
-	            background: var(--lg-surface-solid);
-	            margin: 3% auto;
-	            padding: 40px 35px;
-	            border-radius: var(--lg-radius-card);
-	            width: 90%;
-	            max-width: 550px;
-	            box-shadow: var(--shadow-modal), 0 0 40px color-mix(in srgb, var(--donate-pink-2) 18%, transparent);
-	            position: relative;
-	            animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-	            border: 1px solid var(--lg-glass-border);
-	        }
-
-	        .donate-close {
-            position: absolute;
-            right: 20px;
-            top: 15px;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-	            background: color-mix(in srgb, var(--donate-pink-1) 20%, transparent);
-	            border: none;
-            font-size: 20px;
-            font-weight: bold;
-            color: var(--text-secondary);
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-	        .donate-close:hover {
-	            background: color-mix(in srgb, var(--donate-pink-ink) 30%, transparent);
-	            color: var(--donate-pink-ink);
-	            transform: rotate(90deg) scale(1.1);
-	        }
-
-	        .donate-modal h2 {
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-	            background: linear-gradient(135deg, var(--donate-pink-2) 0%, var(--donate-pink-1) 100%);
-	            -webkit-background-clip: text;
-	            -webkit-text-fill-color: transparent;
-	            background-clip: text;
-	            text-align: center;
-	        }
-
-        .donate-intro {
-            text-align: center;
-            color: var(--text-secondary);
-            margin-bottom: 25px;
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-	        .donate-intro strong {
-	            color: var(--donate-pink-2);
-	            font-weight: 600;
-	        }
-
-        .donate-options {
-            display: flex;
-            justify-content: center;
-            margin: 25px 0;
-        }
-
-	        .donate-card {
-            background: var(--lg-surface-solid);
-            padding: 30px 25px;
-            border-radius: var(--lg-radius-card);
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            border: 1px solid var(--lg-glass-border);
-	            box-shadow: 0 8px 25px color-mix(in srgb, var(--donate-pink-2) 16%, transparent);
-	        }
-
-	        .donate-card:hover {
-	            transform: translateY(-8px) scale(1.02);
-	            box-shadow: 0 15px 40px color-mix(in srgb, var(--donate-pink-2) 30%, transparent);
-	            border-color: color-mix(in srgb, var(--donate-pink-2) 55%, transparent);
-	        }
-
-	        .donate-card h3 {
-	            color: var(--donate-pink-ink);
-	            margin-bottom: 18px;
-	            font-size: 1.3rem;
-	        }
-
-	        .donate-card img {
-            width: 200px;
-            height: 200px;
-            object-fit: contain;
-            margin: 15px auto;
-            border-radius: 15px;
-	            background: var(--qr-surface);
-	            padding: 12px;
-	            box-shadow: var(--shadow-sm);
-	            transition: transform 0.3s;
-	        }
-
-        .donate-card:hover img {
-            transform: scale(1.05);
-        }
-
-        .donate-card p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin: 8px 0;
-        }
-
-	        .donate-note {
-            margin-top: 25px;
-            padding: 20px;
-	            background: linear-gradient(135deg,
-	                color-mix(in srgb, var(--donate-pink-1) 22%, transparent) 0%,
-	                color-mix(in srgb, var(--donate-pink-1) 14%, transparent) 100%
-	            );
-	            border-radius: 15px;
-	            border: 2px dashed color-mix(in srgb, var(--donate-pink-1) 40%, transparent);
-	            font-size: 0.9rem;
-	            color: var(--text-secondary);
-	            text-align: center;
-	            line-height: 1.8;
-	        }
-
-	        .donate-note strong {
-	            color: var(--donate-pink-ink);
-	        }
-
-        .donate-hearts {
-            text-align: center;
-            font-size: 1.5rem;
-            margin-top: 10px;
-            animation: heartbeat 1.5s ease infinite;
-        }
-
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            10%, 30% { transform: scale(1.1); }
-            20%, 40% { transform: scale(0.95); }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 
         /* Overview extras (inside `TỔNG QUAN THỊ TRƯỜNG`) */
         .overview-extras {
@@ -2390,8 +2128,6 @@
 		        @media (prefers-reduced-motion: reduce) {
 		            body::before { animation: none !important; }
 		            .section-card,
-		            .donate-btn,
-		            .donate-btn::before,
 		            .section-item.conclusion-section .icon,
 		            .page-header h1,
 		            .last-update { animation: none !important; }
@@ -3591,19 +3327,6 @@
 	            .keylevels-chart { height: 300px; }
 	        }
 
-		        .ip-disclaimer {
-		            margin-top: 8px;
-		            padding: 10px 12px;
-		            border-radius: 14px;
-		            border: 1px dashed var(--border-color);
-		            background: var(--bg-card);
-		            color: var(--text-secondary);
-		            font-size: 0.82rem;
-		            line-height: 1.45;
-		        }
-		        .ip-disclaimer strong {
-		            color: var(--text-primary);
-		        }
 
 		        /* ===== Maintenance mode (public V3) ===== */
 		        .maintenance-mode body {
@@ -3651,8 +3374,7 @@
 		        }
 		        .maintenance-mode .dashboard,
 		        .maintenance-mode .theme-toggle,
-		        .maintenance-mode #uiModal,
-		        .maintenance-mode #donateModal {
+		        .maintenance-mode #uiModal {
 		            display: none !important;
 		        }
     </style>
@@ -3695,10 +3417,6 @@
 		                <h2>📊 Index</h2>
 		                <div class="date" id="reportDate">--/--/----</div>
 		                <div class="plan-note" id="planNote">Lite (Public): Tổng hợp + VNINDEX, VN30, VN100, VNMIDCAP.</div>
-		                <div class="ip-disclaimer" role="note" aria-label="Bản quyền và miễn trừ trách nhiệm">
-		                    <div><strong>© Bloger Chim Cut</strong> — Nội dung là tài sản trí tuệ.</div>
-		                    <div>Sản phẩm có AI hỗ trợ tạo; chỉ mang tính tham khảo, <strong>không phải</strong> lời khuyên/khuyến nghị đầu tư.</div>
-		                </div>
 		            </div>
 
             <div class="search-box">
@@ -3715,9 +3433,6 @@
 	            <div class="page-header">
 	                <h1 id="pageTitle">Chọn chỉ số và mục để xem</h1>
 	                <div class="last-update" id="lastUpdate">Cập nhật: --/--/---- --:--</div>
-	                <button class="donate-btn" onclick="showDonateModal()">
-	                    💝 Mời bạn cafe / Ủng hộ
-	                </button>
 	            </div>
 
             <!-- Single Section Content -->
@@ -3733,12 +3448,6 @@
 	                    1. Chọn chỉ số ở cột <strong>bên trái</strong><br>
 	                    2. Chọn mục phân tích ở cột <strong>bên phải</strong>
 	                </p>
-	            </div>
-
-	            <div class="donate-footer" id="donateFooter">
-	                <button class="donate-btn" onclick="showDonateModal()">
-	                    💝 Mời bạn cafe / Ủng hộ
-	                </button>
 	            </div>
 	        </div>
 
@@ -3827,7 +3536,6 @@
 					        // Mobile: floating back-to-menu button
 					        document.getElementById('mobileMenuFab')?.addEventListener('click', () => {
 					            try { closeUiModal(); } catch (_) {}
-					            try { closeDonateModal(); } catch (_) {}
 					            try {
 					                if (isMobileViewport()) document.body.classList.remove('mobile-reading');
 					                const target = currentIndex ? document.querySelector('.section-nav') : document.querySelector('.sidebar');
@@ -4026,11 +3734,9 @@
         }
 
         function _updateBodyOverflow() {
-            const donateModal = document.getElementById('donateModal');
             const uiModal = document.getElementById('uiModal');
-            const donateOpen = donateModal && donateModal.style.display === 'block';
             const uiOpen = uiModal && uiModal.style.display === 'block';
-            document.body.style.overflow = (donateOpen || uiOpen) ? 'hidden' : 'auto';
+            document.body.style.overflow = uiOpen ? 'hidden' : 'auto';
         }
 
         function openUiModal({ tone = 'neutral', title = '', subtitle = '', bodyHtml = '', large = false } = {}) {
@@ -6849,24 +6555,9 @@
 				        }, 0);
 				        // Don't auto-select any index by default - let user choose
 
-        // ========== DONATE MODAL FUNCTIONS ==========
-        function showDonateModal() {
-            const modal = document.getElementById('donateModal');
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
-        }
-
-        function closeDonateModal() {
-            const modal = document.getElementById('donateModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Enable scrolling
-        }
-
+        // ========== MODAL FUNCTIONS ==========
         // Close modals when clicking outside
         window.addEventListener('click', function(event) {
-            const donateModal = document.getElementById('donateModal');
-            if (event.target === donateModal) closeDonateModal();
-
             const uiModal = document.getElementById('uiModal');
             if (event.target === uiModal) closeUiModal();
         });
@@ -6874,7 +6565,6 @@
         // Close modals with Escape key
         document.addEventListener('keydown', function(event) {
             if (event.key !== 'Escape') return;
-            closeDonateModal();
             closeUiModal();
         });
     </script>
@@ -6889,41 +6579,5 @@
         </div>
     </div>
 
-    <!-- Donate Modal -->
-    <div id="donateModal" class="donate-modal">
-        <div class="donate-modal-content">
-            <button class="donate-close" onclick="closeDonateModal()">&times;</button>
-
-            <h2>💝 Mời bạn một ly cafe!</h2>
-
-            <div class="donate-intro">
-                Chào bạn! 👋<br>
-                Cảm ơn bạn đã sử dụng dashboard. Nếu bạn thấy <strong>hữu ích</strong>,<br>
-                một ly cafe nhỏ sẽ giúp tôi có thêm động lực để phát triển thêm tính năng mới! ✨
-            </div>
-
-            <div class="donate-options">
-                <!-- MoMo -->
-                <div class="donate-card">
-                    <h3>🔵 MoMo</h3>
-                    <img src="images/donate/momo_qr.jpg" alt="MoMo QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-                    <p style="display: none; color: var(--warning);">Chưa thêm QR code MoMo</p>
-                    <p><strong>Email:</strong> stevetransg@gmail.com</p>
-                    <p style="font-size: 0.85rem; margin-top: 12px; color: var(--text-secondary);">
-                        📱 Scan QR hoặc chuyển khoản
-                    </p>
-                </div>
-            </div>
-
-            <div class="donate-note">
-                💖 <strong>Cảm ơn bạn thật nhiều!</strong><br><br>
-                Mọi sự ủng hộ dù nhỏ đều là động lực lớn để tôi tiếp tục phát triển và cải thiện dashboard mỗi ngày! 🚀
-            </div>
-
-            <div class="donate-hearts">
-                💕 🌸 ✨ 🌷 💗
-            </div>
-        </div>
-    </div>
 </body>
 </html>
